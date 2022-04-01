@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up/Login Form </title>
+	
+	<link href="style.css" rel="stylesheet">
+	
+	
+	<script src="firebase.js"></script>
+	<script src="index.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+</head>
+<body>
+	<div class="contact-form">
+		
+		<h2><i>Sign Up / Sign In</i></h2>
+		<center><label class="custom-field"></label>
+			<form action="">
+				<p>Email</p><input id="email" placeholder="Enter Email" type="email" class="input" required>
+				<p>Password</p><input id="password" placeholder="Enter Password" type="password" class="input" required>
+				<br><br><br>
+				 <input type="submit" onclick="signUp()" value="Sign up">
+				 <center><p><i>OR</i></p></center>
+				 <input type="submit" onclick ="login()"value="Sign in">
+				 
+				 <center><small><span id="error" style="color: #CCC"></span></small></center>
+                <center><label class="custom-field">
+		
+             
+			<center><p><input type="checkbox"><i>Remember Me</i></p></center>
+		</form>
+	</div>
+    </div>
+	
+
+</body>
+</html>
+</body>
+</html>
