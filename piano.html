@@ -6,34 +6,112 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles1.css">
   <script src="script.js" defer></script>
-  <!-- <script src="play.js" defer></script> -->
 
   <title>Piano</title>
 
  
 </head>
-<body>
-  <div class="piano"> 
-    <div data-note="C" class="key white "></div>
-    <div data-note="Db" class="key black "></div>
-    <div data-note="D" class="key white "></div>
-    <div data-note="B" class="key black "></div>
-    <div data-note="E" class="key white "></div>
-  
-    <div data-note="F" class="key white "></div>
-    <div data-note="Gb" class="key black "></div>
-    <div data-note="G" class="key white "></div>
-    <div data-note="B" class="key black "></div>
-    <div data-note="A" class="key white "></div>
-    <div data-note="Bb" class="key black "></div>
-    <div data-note="B" class="key white "></div>
-  
-    <div data-note="B" class="key white "></div>
-    <div data-note="B" class="key black "></div>
-    <div data-note="B" class="key white "></div>
-    <div data-note="B" class="key black "></div>
-    <div data-note="B" class="key white "></div>
-  </div> 
+
+  <section id="main">
+    <div class="nowplaying"></div>
+   
+  <div class="keys">
+    <div id="white" data-key ="65" class="key white" data-note ="A" onclick="a.play()"></div>
+    <div id="black" data-key ="68" class="key black" data-note ="C#" onclick="ab.play()"></div>
+    <div id="white" data-key ="69" class="key white" data-note ="D" onclick="b.play()"></div>
+    <div id="black" data-key ="71" class="key black" data-note ="D#" onclick="bb.play()"></div>
+    <div id="white" data-key ="72" class="key white" data-note ="E" onclick ="c.play()"></div>
+    <div id="white" data-key ="84" class="key white" data-note ="E#" onclick ="d.play()"></div>
+    <div id="black" data-key ="89" class="key black" data-note ="F" onclick ="db.play()"></div>
+    <div id="white" data-key ="74" class="key white" data-note ="F#" onclick ="e.play()"></div>
+    <div id="black" data-key ="75" class="key black" data-note ="G" onclick ="eb.play()"></div>
+    <div id="white" data-key ="76" class="key white" data-note ="G#" onclick ="f.play()"></div>
+    <div id="black" data-key ="79" class="key black" data-note ="H" onclick ="g.play()"></div>
+    <div id="white" data-key ="80" class="key white" data-note ="H#" onclick ="gb.play()"></div>
+    <div id="white" data-key ="93" class="key white" data-note ="F#" onclick ="e.play()"></div>
+    <div id="black" data-key ="73" class="key black" data-note ="G" onclick ="eb.play()"></div>
+    <div id="white" data-key ="83" class="key white" data-note ="G#" onclick ="f.play()"></div>
+    <div id="black" data-key ="99" class="key black" data-note ="H" onclick ="g.play()"></div>
+    <div id="white" data-key ="86" class="key white" data-note ="H#" onclick ="gb.play()"></div>
+  </div>
+
+  <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+  <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+  <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+  <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+  <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+  <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+  <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+  <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+  <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+  <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+  <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+  <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+  <audio data-key="93" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+  <audio data-key="73" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+  <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+  <audio data-key="99" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+  <audio data-key="86" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+
+  </section>
+
+  <script>
+    var a = new Audio()
+    a.src = "notes/A.mp3";
+    var ab = new Audio();
+    ab.src = "notes/Ab.mp3";
+    var b = new Audio();
+    b.src = "notes/B.mp3";
+    var bb = new Audio();
+    bb.src = "notes/Bb.mp3";
+    var c = new Audio();
+    c.src = "notes/C.mp3";
+    var d = new Audio();
+    d.src = "notes/D.mp3";
+    var db = new Audio();
+    db.src = "notes/Db.mp3";
+    var e = new Audio();
+    e.src = "notes/E.mp3";
+    var eb = new Audio();
+    eb.src = "notes/Eb.mp3";
+    var f = new Audio();
+    f.src = "notes/F.mp3";
+    var g = new Audio();
+    g.src = "notes/G.mp3";
+    var gb = new Audio();
+    gb.src = "notes/Gb.mp3";
+
+  const keys = document.querySelectorAll(".key"),
+  note = document.querySelector(".nowplaying");
+  // hints = document.querySelectorAll(".hints");
+
+function playNote(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+  if (!key) return;
+
+  const keyNote = key.getAttribute("data-note");
+
+  key.classList.add("playing");
+  note.innerHTML = keyNote;
+  audio.currentTime = 0;
+  audio.play();
+  key.classList.remove("playing");
+}
+
+function removeTransition(e) {
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
+}
+
+
+
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+window.addEventListener("keydown", playNote);
+
+</script>
   <div class="container">
 
     <div id="display">
@@ -62,23 +140,6 @@
     </div>
 
 </div>
-<div>
-
-  <audio id="C" src="notes/C.mp3"></audio>
-  <audio id="Db" src="notes/Db.mp3"></audio>
-  <audio id="D" src="notes/D.mp3"></audio>
-  <audio id="Eb" src="notes/Eb.mp3"></audio>
-  <audio id="E" src="notes/E.mp3"></audio>
-  <audio id="F" src="notes/F.mp3"></audio>
-  <audio id="Gb" src="notes/Gb.mp3"></audio>
-  <audio id="G" src="notes/G.mp3"></audio>
-  <audio id="Ab" src="notes/Ab.mp3"></audio>
-  <audio id="A" src="notes/A.mp3"></audio>
-  <audio id="Bb" src="notes/Bb.mp3"></audio>
-  <audio id="B" src="notes/B.mp3"></audio>
-
-</div>
-      <script src="om.js" defer></script>
 </body>
 </html>
 
