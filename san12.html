@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up/Login</title>
-        <link
+        <title>Let's Authenticate</title>
+        <!-- <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         rel="stylesheet"
         />
@@ -20,29 +20,45 @@
         <script
         type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
-        ></script>
-        <link href="./index.css" rel="stylesheet" />
+        ></script> -->
+        <link href="index.css" rel="stylesheet" />
+       
+        
     </head>
-    
+    <style>
+        body {
+          background-image: url('back.jpg');
+          background-repeat: no-repeat;
+          height: 200px;
+          background-attachment: scroll;
+          background-size: cover;
+        }
+        </style>
     <body class="d-flex justify-content-center p-5">
         <div class="card">
             <div class="card-header">
-                <center><h3>Login Form</h3></center>
+                <br><br><br>
+                <center><h3>Sign Up/Sign In</h3></center>
             </div>
             <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
-                <!-- <center><small><span id="error" style="color: rgb(208, 26, 44)"></span></small></center> -->
+                <center><small><span id="error" style="color: red"></span></small></center>
                 <center><label class="custom-field">
+                    <p>Enter Mail Id</p>
                     <input id="email" type="text" class="input" required />
-                    <span class="placeholder">Email Id</span>
+                    <span class="placeholder"></span>
                 </label><br />
                 <label class="custom-field">
+                    <p>Enter Password</p>
                     <input id="password" type="password" class="input" required />
-                    <span class="placeholder">Password</span>
+                    <span class="placeholder"></span>
                 </label></center><br /><br/>
-                <!--  -->
-                <center><button type="submit" class="btn btn-primary">Login</button>
-                <button onclick="signUp()" class="btn btn-secondary">Sign Up</button>
+              
+                <center><button type="submit" class="az">Login</button>
+                    <br><br>
+                <button onclick="signUp()" class="zx">Sign Up</button>
                 </center>
+                <br>
+                <center><a href="#" onclick="forgotPass()">Forgot Password</a></center>
             </form>
         </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
