@@ -97,7 +97,7 @@
  
    const keys = document.querySelectorAll(".key"),
    note = document.querySelector(".nowplaying");
-   // hints = document.querySelectorAll(".hints");
+ 
  
  function playNote(e) {
    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
@@ -141,38 +141,25 @@
      
          <button id="reset" onclick="reset()">Reset</button>
         
-         <!-- <div data-role="controls">
-             <br> <br> <br> <br> <br> <br> <br>
-            
-           
-           <audio id="player"controls></audio>
-            <br> <br> 
-            <div id="lk">
-             <button id="record">Record</button>
-             <button id="stop">Stop Recording</button>
-             </div>
-         </div>
-       <div data-role="recordings"></div>
- 
-     </div> -->
+
  
  </div>
  <br><br><br><br>
  <div class="console">
    <div class="div-title">
-       <!-- <img src="./img/music.svg" alt="music" class="music"> -->
+       
        <h1 class="title">RECORD</h1>
    </div>
    <div class="stopwatch"></div>
    <div class="reset">
-       <!-- <a href="/"> <img class="reset" src="./img/reset.svg" alt="home"></a> -->
+       
    </div>
  <div class="record">
    <button class ="rec">Rec</button>
    <button class ="stop">Stop</button>
  
  </div>
-   <!-- <audio class="audio" src="">Audio</audio> -->
+   
  </div>
  <style>.hj{
  
@@ -197,7 +184,7 @@
      opacity: 1;
     padding-right: 100px;
  
-     /* transition: opacity 3s ease-in-out; */
+     
  }
  
  audio::-webkit-media-controls-play-button {
@@ -224,8 +211,6 @@
  </style>
    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
 
