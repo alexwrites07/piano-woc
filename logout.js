@@ -6,7 +6,8 @@ firebase.auth().onAuthStateChanged((user)=>{
     }
 })
 
-
 function logout(){
-    firebase.auth().signOut()
+    firebase.auth().signOut().then(() => {
+        alert("Logged Out Successfully");
+})
 }
