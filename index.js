@@ -11,7 +11,10 @@ firebase.auth().onAuthStateChanged((user)=>{
 function login(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
-    firebase.auth().signInWithEmailAndPassword(email, password)
+      firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+        alert("Logged In Successfully");
+    })
+   
     .catch((error)=>{
         document.getElementById("error").innerHTML = error.message
     })
@@ -20,7 +23,9 @@ function login(){
 function signUp(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
+        alert("Signed Up Successfully");
+    })
     .catch((error) => {
         document.getElementById("error").innerHTML = error.message
     });
